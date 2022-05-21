@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style>
+
+
+
+
+
+
+body {
+    font-family: Arial;
+    padding: 0px;
+    background:white;
+}
+
+
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+}
+
+
+
+
+
+.card {
+     background-color: white;
+     padding: 50px 200px;
+
+}
+
+
+
+
+
+.icon-bar {
+    width: 100%;
+    background-color: #0f1226;
+    overflow: auto;
+}
+
+
+.icon-bar a {
+    float: right;
+    width: 15%;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+text-decoration: none;
+}
+
+
+.icon-bar a:hover {
+    background-color: #171d54;
+}
+
+.active {
+    background-color: #171d54; 
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #171d54;
+color: white;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #171d54;
+color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #ebecf5;
+}
+
+</style>
+<head>
+
+<div class="icon-bar">
+
+  <a href="vhod.html#">Вход</a> 
+  <a href="kon.html#">Контакты</a> 
+  <a href="ay.html#">Расписание Аудиторий</a>
+  <a href="pr.html#">Расписание Преподователей</a> 
+  <a class="active" href="gr.html#">Расписание Групп</a> 
+<a style=" float: left" href="https://www.tspu.edu.ru/"><img src="image/logo.png" width="50" 
+   height="30"  alt=""></a>
+ 
+</div>
+
+</head>
+<body>
+
+
+ <div class="card">
+
+
+  <input list="ShowDataList" class="form-control" placeholder="Выберите номер группы:">
+  
+  <datalist id="ShowDataList">
+    <option value=491>
+    <option value="492">
+    <option value="493">
+    <option value="381">
+  </datalist>
+
+
+      
+</div>
+<div class="card">
+
+<div class="tab">
+
+
+  <button class="tablinks" onclick="openDen(event, 'Pon')"><h3>Понедельник</h3></button>
+  <button class="tablinks" onclick="openDen(event, 'Vt')"><h3>Вторник</h3></button>
+  <button class="tablinks" onclick="openDen(event, 'Sr')"><h3>Среда</h3></button>
+<button class="tablinks" onclick="openDen(event, 'Cht')"><h3>Четверг</h3></button>
+  <button class="tablinks" onclick="openDen(event, 'Pt')"><h3>Пятница</h3></button>
+  <button class="tablinks" onclick="openDen(event, 'Sb')"><h3>Суббота</h3></button>
+</div>
+     
+
+<div  id = "Pon"  class="tabcontent">
+      
+  <table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 10%" scope="col">Время</th>
+      <th style= "text-align: center" scope="col">Предмет</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">8:30 - 10:05</th>
+      <td>
+<p>Ауд. 23</p>
+<p>Иванов А.Д.</p>
+<p>Информатика</p>
+</td>
+
+
+    </tr>
+    <tr>
+      <th scope="row">10:20 - 11:55</th>
+      <td>
+<p>Ауд. 35</p>
+<p>Котов Б.А.</p>
+<p>Информационные системы</p>
+</td>
+
+    </tr>
+    <tr>
+      <th scope="row">12:25 - 14:00</th>
+      <td><p>Ауд. 11</p>
+<p>Руднов К.А.</p>
+<p>Программирование</p></td>
+
+    </tr>
+<tr>
+      <th scope="row">14:15 - 15:50</th>
+      <td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">16:05 - 17:40</th>
+      <td> </td>
+
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<div id="Vt" class="tabcontent">
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 10%" scope="col">Время</th>
+      <th style= "text-align: center" scope="col">Предмет</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">8:30 - 10:05</th>
+      <td>
+</td>
+
+
+    </tr>
+    <tr>
+      <th scope="row">10:20 - 11:55</th>
+      <td>
+<p>Ауд. 35</p>
+<p>Петров Д.Б.</p>
+<p>Математика</p>
+</td>
+
+    </tr>
+    <tr>
+      <th scope="row">12:25 - 14:00</th>
+      <td><p>Ауд. 11</p>
+<p>Коломатов О.Д.</p>
+<p>Программирование</p></td>
+
+    </tr>
+<tr>
+      <th scope="row">14:15 - 15:50</th>
+      <td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">16:05 - 17:40</th>
+      <td> </td>
+
+    </tr>
+
+  </tbody>
+</div>
+
+</table>
+
+</div>
+
+<div id="Sr" class="tabcontent">
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 10%" scope="col">Время</th>
+      <th style= "text-align: center" scope="col">Предмет</th>
+
+    </tr>
+  </thead>
+  <tbody>
+ 
+<tr>
+      <th scope="row">8:30 - 10:05</th>
+<td> </td>
+</tr>
+    <tr>
+      <th scope="row">10:20 - 11:55</th>
+      <td>
+</td>
+
+    </tr>
+    <tr>
+      <th scope="row">12:25 - 14:00</th>
+<td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">14:15 - 15:50</th>
+      <td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">16:05 - 17:40</th>
+      <td> </td>
+
+    </tr>
+  </tbody>
+</div>
+
+</table>
+
+</div>
+
+<div id="Cht" class="tabcontent">
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 10%" scope="col">Время</th>
+      <th style= "text-align: center" scope="col">Предмет</th>
+
+    </tr>
+  </thead>
+  <tbody>
+ 
+<tr>
+      <th scope="row">8:30 - 10:05</th>
+<td> </td>
+</tr>
+    <tr>
+      <th scope="row">10:20 - 11:55</th>
+      <td>
+</td>
+
+    </tr>
+    <tr>
+      <th scope="row">12:25 - 14:00</th>
+<td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">14:15 - 15:50</th>
+      <td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">16:05 - 17:40</th>
+      <td> </td>
+
+    </tr>
+  </tbody>
+</div>
+
+</table>
+
+</div>
+
+<div id="Pt" class="tabcontent">
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 10%" scope="col">Время</th>
+      <th style= "text-align: center" scope="col">Предмет</th>
+
+    </tr>
+  </thead>
+  <tbody>
+ 
+<tr>
+      <th scope="row">8:30 - 10:05</th>
+<td> </td>
+</tr>
+    <tr>
+      <th scope="row">10:20 - 11:55</th>
+      <td>
+</td>
+
+    </tr>
+    <tr>
+      <th scope="row">12:25 - 14:00</th>
+<td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">14:15 - 15:50</th>
+      <td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">16:05 - 17:40</th>
+      <td> </td>
+
+    </tr>
+  </tbody>
+</div>
+
+</table>
+
+</div>
+
+<div id="Sb" class="tabcontent">
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th style="width: 10%" scope="col">Время</th>
+      <th style= "text-align: center" scope="col">Предмет</th>
+
+    </tr>
+  </thead>
+  <tbody>
+ 
+<tr>
+      <th scope="row">8:30 - 10:05</th>
+<td> </td>
+</tr>
+    <tr>
+      <th scope="row">10:20 - 11:55</th>
+      <td>
+</td>
+
+    </tr>
+    <tr>
+      <th scope="row">12:25 - 14:00</th>
+<td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">14:15 - 15:50</th>
+      <td> </td>
+
+    </tr>
+<tr>
+      <th scope="row">16:05 - 17:40</th>
+      <td> </td>
+
+    </tr>
+  </tbody>
+</div>
+
+</table>
+</div>
+
+
+</div>
+
+
+<script>
+function openDen(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html> 
